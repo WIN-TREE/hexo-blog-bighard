@@ -7,6 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
+    "gen-hexo": "hexo clean && hexo generate",
+    "run-hexo": "hexo clean && hexo server",
     "preinstall": "npx npm-force-resolutions"
   },
   "hexo": {
@@ -20,6 +22,7 @@
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^7.0.0",
+    "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
