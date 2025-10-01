@@ -23,7 +23,6 @@
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
-    "strip-ansi": "6.0.1",
-    "ansi-regex": "5.0.1"
+    "strip-ansi": "^5.1.0"
   }
 }
