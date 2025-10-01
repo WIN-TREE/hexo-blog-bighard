@@ -26,6 +26,10 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Debug environment
+        run: |
+          echo "FTP_URL: ${{ env.FTP_URL }}"
+          echo "FTP_USER: ${{ env.FTP_USER }}"
       - name: FTP Clean & Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
