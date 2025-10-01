@@ -9,10 +9,6 @@
     "server": "hexo server",
     "preinstall": "npx npm-force-resolutions"
   },
-  "resolutions": {
-    "strip-ansi": "6.0.1",
-    "ansi-regex": "5.0.1"
-  },
   "hexo": {
     "version": "8.0.0"
   },
@@ -26,6 +22,8 @@
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "strip-ansi": "6.0.1",
+    "ansi-regex": "5.0.1"
   }
 }
