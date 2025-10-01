@@ -29,8 +29,8 @@ jobs:
     - name: Delete remote files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ env.FTP_URL }}
-        username: ${{ env.FTP_USER }}
+        server: ftpupload.net
+        username: if0_40069882
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dummy-delete/
         server-dir: /htdocs/
