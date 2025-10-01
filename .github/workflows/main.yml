@@ -1,0 +1,37 @@
+name: CI/CD with FTP Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  FTP_URL: ${{ vars.FTP_URL }}
+  FTP_USER: ${{ vars.FTP_USER }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: FTP Clean & Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ env.FTP_URL }}
+          username: ${{ env.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public
+          server-dir: /htdocs
+          dangerous-clean-slate: true
