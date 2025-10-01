@@ -34,7 +34,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dummy-delete/
         server-dir: /htdocs/
-        delete: true
 
     - name: Upload files to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -44,4 +43,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./public/
         server-dir: /htdocs/
-        delete: false
