@@ -38,8 +38,8 @@ jobs:
     - name: Upload files to FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ env.FTP_URL }}
-        username: ${{ env.FTP_USER }}
+        server: ftpupload.net
+        username: if0_40069882
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./public/
         server-dir: /htdocs/
