@@ -1,4 +1,4 @@
-name: CI/CD with FTP Deployment
+name: FTP Auto Deploy
 
 on:
   push:
@@ -9,7 +9,7 @@ env:
   FTP_USER: ${{ vars.FTP_USER }}
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -26,11 +26,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Debug environment
-        run: |
-          echo "FTP_URL: ${{ env.FTP_URL }}"
-          echo "FTP_USER: ${{ env.FTP_USER }}"
-      - name: FTP Clean & Deploy
+      - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ env.FTP_URL }}
