@@ -6,7 +6,12 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "strip-ansi": "6.0.1",
+    "ansi-regex": "5.0.1"
   },
   "hexo": {
     "version": "8.0.0"
