@@ -29,7 +29,7 @@ menu:
 
 code_blocks:
   # Code block theme: darker / pale night / light / ocean / false
-  theme: light
+  theme: ocean
   macStyle: false
   # Code block height limit (unit: px)
   height_limit: false
@@ -53,10 +53,10 @@ social:
 # Image Settings
 # --------------------------------------
 
-favicon: /img/favicon.png
+favicon: https://img.cdn1.vip/i/68de3846dba4f_1759393862.webp
 
 avatar:
-  img: /img/butterfly-icon.png
+  img: https://img.cdn1.vip/i/68de3846dba4f_1759393862.webp
   effect: false
 
 # Disable all banner images
@@ -111,7 +111,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: false
-  subtitle: 'Page Not Found'
+  subtitle: '啊哦，网页不见了！'
   background: /img/error-page.png
 
 post_meta:
@@ -288,7 +288,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/WIN-TREE
   card_announcement:
     enable: true
     content: This is my Blog
@@ -1053,6 +1053,8 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/butterfly/css/font.css">
+    - <link rel="stylesheet" href="/butterfly/css/custom.css">
   bottom:
     # - <script src="xxxx"></script>
 
