@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 某巨硬の视窗十系统的小站
+title: 某巨硬的小站
 subtitle: ''
 description: ''
 keywords: Blogs,Technology
 author: 某巨硬の视窗十系统
-language: zh-cn
+language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
@@ -118,3 +118,72 @@ tag_plugins:
     iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
     carousel: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
     tag_plugins_css: https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+
+# Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+  enable: true #开关插件版看板娘
+  scriptFrom: local # 默认
+  pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)
+  pluginJsPath: lib/ # 脚本文件相对与插件根目录路径
+  pluginModelPath: assets/ # 模型文件相对与插件根目录路径
+  # scriptFrom: jsdelivr # jsdelivr CDN
+  # scriptFrom: unpkg # unpkg CDN
+  # scriptFrom: https://npm.elemecdn.com/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+  model:
+    use: live2d-widget-model-hijiki # npm-module package name
+    # use: wanko # 博客根目录/live2d_models/ 下的目录名
+    # use: ./wives/wanko # 相对于博客根目录的路径
+    # use: https://npm.elemecdn.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
+  display:
+    position: left #控制看板娘位置
+    width: 250 #控制看板娘大小
+    height: 400 #控制看板娘大小
+  mobile:
+    show: true # 手机中是否展示
+
+# footer_beautify
+# 页脚计时器：[Native JS Timer](https://akilar.top/posts/b941af/)
+# 页脚徽标：[Add Github Badge](https://akilar.top/posts/e87ad7f8/)
+footer_beautify:
+  enable:
+    timer: true # 计时器开关
+    bdage: true # 徽标开关
+  priority: 5 #过滤器优先权
+  enable_page: all # 应用页面
+  exclude: #屏蔽页面
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: id
+    name: footer-wrap
+    index: 0
+  # 计时器部分配置项
+  runtime_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.js
+  runtime_css: https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css
+  # 徽标部分配置项
+  swiperpara: 3 #若非0，则开启轮播功能，每行徽标个数
+  bdageitem:
+    - link: https://hexo.io/ #徽标指向网站链接
+      shields: https://img.shields.io/badge/Powered%20by-Hexo-0e83cd?logo=hexo #徽标API
+      message: 博客由Hexo驱动 #徽标提示语
+    - link: https://butterfly.js.org/
+      shields: https://img.shields.io/badge/Hexo%20Theme-Butterfly-0e83cd?logo=bitdefender
+      message: Hexo主题为Butterfly
+    - link: https://www.jsdelivr.com/
+      shields: https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
+      message: 本站使用JsDelivr为静态资源提供CDN加速
+    - link: https://www.cloudflare.com/developer-platform/products/pages/
+      shields: https://img.shields.io/badge/Hosted%20on-Cloudflare%20Pages-f38020?logo=cloudflarepages
+      message: 本站托管于Cloudflare Pages
+    - link: https://github.com/WIN-TREE/hexo-blog-bighard
+      shields: https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub
+      message: 本站项目由Github托管
+    - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+      shields: https://img.shields.io/badge/Copyright-CC%20BY--NC--SA-000000?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU%2BQ3JlYXRpdmUgQ29tbW9uczwvdGl0bGU%2BPHBhdGggZD0iTTExLjk4MyAwYy0zLjI5MiAwLTYuMTkgMS4yMTctOC40MjggMy40ODVDMS4yNSA1LjgxOSAwIDguODQ0IDAgMTJjMCAzLjE4OSAxLjIxNyA2LjE0OCAzLjUyMiA4LjQ1QzUuODI3IDIyLjc1IDguODIyIDI0IDExLjk4MyAyNGMzLjE2IDAgNi4yMjItMS4yNSA4LjU5My0zLjU4M0MyMi44MTUgMTguMjE0IDI0IDE1LjI4NyAyNCAxMmMwLTMuMjU1LTEuMTg2LTYuMjE0LTMuNDU4LTguNDgzQzE4LjIzOCAxLjIxNyAxNS4yNzUgMCAxMS45ODMgMHptLjAzMyAyLjE3YzIuNyAwIDUuMTAzIDEuMDIgNi45OCAyLjg5MyAxLjg0MyAxLjg0MSAyLjgzIDQuMjc0IDIuODMgNi45MzcgMCAyLjY5Ni0uOTU0IDUuMDYzLTIuNzk4IDYuODcyLTEuOTQzIDEuOTA2LTQuNDQ0IDIuOTI2LTcuMDEyIDIuOTI2LTIuNjAxIDAtNS4wMzgtMS4wMTktNi45MTQtMi44OTMtMS44NzctMS44NzUtMi45My00LjM0LTIuOTMtNi45MDUgMC0yLjU5NyAxLjA1My01LjA2MyAyLjkzLTYuOTcgMS44NDQtMS44NzQgNC4yMTQtMi44NiA2LjkxNC0yLjg2ek04LjY4IDguMjc4QzYuNzIzIDguMjc4IDUuMTY1IDkuNjYgNS4xNjUgMTJjMCAyLjM4IDEuNDY1IDMuNzIyIDMuNTgxIDMuNzIyIDEuMzU4IDAgMi41MTYtLjc0NCAzLjE1NS0xLjg3NGwtMS40OTEtLjc1OGMtLjMzMy43OTgtLjgzOSAxLjAzNy0xLjQ3OCAxLjAzNy0xLjEwNSAwLTEuNjEtLjkxNy0xLjYxLTIuMTI2IDAtMS4yMS40MjYtMi4xMjcgMS42MS0yLjEyNy4zMiAwIC45Ni4xNzMgMS4zMzIuOTdsMS41OTctLjgzOGMtLjY4LTEuMjM2LTEuODM3LTEuNzI4LTMuMTgxLTEuNzI4em02LjkzMiAwYy0xLjk1NyAwLTMuNTE0IDEuMzgyLTMuNTE0IDMuNzIyIDAgMi4zOCAxLjQ2NCAzLjcyMiAzLjU4IDMuNzIyIDEuMzU5IDAgMi41MTYtLjc0NCAzLjE1NS0xLjg3NGwtMS40OS0uNzU4Yy0uMzMzLjc5OC0uODQgMS4wMzctMS40NzggMS4wMzctMS4xMDUgMC0xLjYxMS0uOTE3LTEuNjExLTIuMTI2IDAtMS4yMS40MjYtMi4xMjcgMS42MS0yLjEyNy4zMiAwIC45Ni4xNzMgMS4zMzIuOTdsMS41OTctLjgzOGMtLjY4LTEuMjM2LTEuODM3LTEuNzI4LTMuMTgxLTEuNzI4eiIvPjwvc3ZnPg%3D%3D
+      message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+  swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js

@@ -92,7 +92,7 @@ footer_img: false
 
 # Website Background
 # Can set it to color or image url
-background:
+background: https://bing.img.run/rand_uhd.php
 
 cover:
   # Disable the cover or not
@@ -287,7 +287,7 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
+      text: 看看我的Github？
       link: https://github.com/WIN-TREE
   card_announcement:
     enable: true
@@ -1057,6 +1057,7 @@ inject:
     - <link rel="stylesheet" href="/butterfly/css/custom.css">
   bottom:
     # - <script src="xxxx"></script>
+    - <script async src="/js/diytitle.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
